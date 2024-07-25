@@ -1,0 +1,7 @@
+@startuml
+class Buyer {
+    String name
+    int age
+    void purchase()
+}
+@enduml
