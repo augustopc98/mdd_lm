@@ -1,9 +1,13 @@
-import { createUMLAssistant } from "./agents/UMLToDDD.js";
+import { createUMLToDDDAssistant } from "./agents/UMLToDDD.js";
 import { createDDDToRepositoryAssistant } from "./agents/DDDToRepository.js";
 import { createRepositoryToSpringBootAssistant } from "./agents/RepositoryToSpringBoot.js";
 import { initResults, writeResult } from "./helpers/resultLogWriter.js";
 import fs from 'fs';
 import path from 'path';
+import dotenv from 'dotenv';
+
+// Cargar variables de entorno desde el archivo .env
+dotenv.config();
 
 async function main() {
     // Inicializar resultados
